@@ -29,7 +29,7 @@ public class GetLabels {
     public static void main(String[] args) throws IOException {
         
     	Regions clientRegion = Regions.US_EAST_1;
-        String bucketName = "njit-cs-643";
+        String bucketName = "**bucket name**";
         String images_list[] = new String[10];
         int i=1;
 
@@ -86,7 +86,7 @@ public class GetLabels {
             		System.out.println("Car : " + label.getConfidence() + "\n");
             		//SQS
             		SendMessageRequest send_msg_request = new SendMessageRequest()
-                            .withQueueUrl("https://sqs.us-east-1.amazonaws.com/932808190514/MYqueue")
+                            .withQueueUrl("**URL**")
                             .withMessageBody(photo);
              		//send_msg_request.setMessageGroupId("messageGroup1");
              		//send_msg_request.setMessageDeduplicationId("photo");
