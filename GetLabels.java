@@ -88,6 +88,7 @@ public class GetLabels {
             		SendMessageRequest send_msg_request = new SendMessageRequest()
                             .withQueueUrl("**URL**")
                             .withMessageBody(photo);
+                    //use setMessageGroupId() and setMessageDeduplicationId() for a FIFO queue
              		//send_msg_request.setMessageGroupId("messageGroup1");
              		//send_msg_request.setMessageDeduplicationId("photo");
             		sqs.sendMessage(send_msg_request);
